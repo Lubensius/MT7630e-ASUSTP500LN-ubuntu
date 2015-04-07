@@ -16,20 +16,4 @@ Open Points:
 * WiFi Signal Quality doesn't report correctly (always full reading)
 * Sometimes (rare) NOP after suspend, but also maybe ubuntu issue. 
 
-UPDATE:
-Make BT module working:
-After switch on of the device it is has no firmware. In this stage the device reports 0x0489:0xe069.
-So the firmwareloader has to react on this. mt76xx is nothing but a firmewareloader.
-With correct firmware the device is recognised by btusb module.
 
-INSTALL:
-!!!You need to have all packages necessary to build kernel modules as well as dkms installed!!!
-
-as root do
-# Put rt2800pci-all and mt76xx-all directories under /usr/src/
-# dkms install -m rt2800pci -v all 
-# dkms install -m mt76xx -v all 
-# echo mt76xx >/etc/modules-load.d/Bluetooth.conf
-# shutdown, switch off and reboot
-
-Enjoy
