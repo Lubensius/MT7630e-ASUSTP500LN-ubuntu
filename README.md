@@ -27,6 +27,7 @@ INSTALL:
 
 as root do
 # Put rt2800pci-all and mt76xx-all directories under /usr/src/
+# Put *.bin files in firmware under /lib/firmware
 # dkms install -m rt2800pci -v all 
 # dkms install -m mt76xx -v all 
 # echo mt76xx >/etc/modules-load.d/Bluetooth.conf
